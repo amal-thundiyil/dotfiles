@@ -135,3 +135,6 @@ alias vimdiff='nvim -d'
 export EDITOR=nvim
 . "$HOME/.cargo/env"
 source ~/.bash_completion.d/alacritty
+
+# Created by `pipx` on 2022-02-16 12:30:13
+export PATH="$PATH:/home/amal/.local/bin"
