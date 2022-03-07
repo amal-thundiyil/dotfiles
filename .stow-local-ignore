@@ -1,5 +1,3 @@
-
-  
 # ~./dotfiles/.stow.local.ignore: Files to be ignored by gnu 'stow'
 #
 # Comments and blank lines are allowed.
@@ -26,3 +24,5 @@ _darcs
 ^/README.*
 ^/LICENSE.*
 ^/COPYING
+
+**swap-pane
