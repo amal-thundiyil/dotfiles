@@ -117,5 +117,4 @@ alias vimdiff='nvim -d'
 export EDITOR=nvim
 
 
-alias ll='ls -alG'
-
+alias ll='ls -al'
