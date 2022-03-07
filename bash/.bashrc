@@ -116,12 +116,21 @@ if ! shopt -oq posix; then
   fi
 fi
 
-# python paths
+# Java paths
+JAVA_HOME="/usr/lib/jvm/java-8-openjdk-amd64"
+
+# Flutter settings
+export PATH="$PATH:$HOME/snap/flutter/common/flutter/bin"
+export CHROME_EXECUTABLE=/snap/bin/chromium
+export PATH=$PATH:$HOME"/Android/Sdk/platform-tools"
+
+# Python settings
 export PYTHONPATH="${PYTHONPATH}:/home/amal/Documents/hydra/hydrus"
 export PYTHONPATH="${PYTHONPATH}:/home/amal/Documents/hydra/hydra-python-core"
 export PYTHONPATH="${PYTHONPATH}:/home/amal/Documents/hydra/hydra-open-api-parser"
 export PYTHONPATH="${PYTHONPATH}:/home/amal/Documents/hydra/hydra-python-agent"
 export PYTHONPATH="${PYTHONPATH}:/home/amal/Documents/hydra/hydra-python-agent-gui"
+export PYTHONPATH="${PYTHONPATH}:${HOME}/Documents/projects/moni-moni"
 
 # nvm paths
 export NVM_DIR="$HOME/.nvm"
@@ -138,3 +147,5 @@ source ~/.bash_completion.d/alacritty
 
 # Created by `pipx` on 2022-02-16 12:30:13
 export PATH="$PATH:/home/amal/.local/bin"
+
+complete -C /usr/bin/terraform terraform
