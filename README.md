@@ -24,3 +24,8 @@ stow */ # Everything (the '/' ignores the README)
 ```bash
 stow bash # Just my bash config
 ```
+
+
+```bash
+stow -D . # clean up symbolic links
+```

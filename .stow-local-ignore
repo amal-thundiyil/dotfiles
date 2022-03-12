@@ -26,5 +26,5 @@ _darcs
 ^/COPYING
 
 
-/git/*
-^/swap-pane.*
+git
+^/swap-pane
