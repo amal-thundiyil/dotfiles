@@ -17,14 +17,21 @@ _darcs
 
 \.git
 \.gitignore
-
-.+~          # emacs backup files
+.
++~          # emacs backup files
 \#.*\#       # emacs autosave files
 
 ^/README.*
 ^/LICENSE.*
 ^/COPYING
 
+<<<<<<< HEAD
 
 git
 ^/swap-pane
+=======
+**swap-pan.gitignore
+
+brew.shbootstrap.sh
+brew.sh
+>>>>>>> 6d46448 (Configure)
