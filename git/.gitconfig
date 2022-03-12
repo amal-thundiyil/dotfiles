@@ -1,12 +1,3 @@
-[user]
-
-	email = amalthundiyil0@gmail.com
-	name = amal-thundiyil
-
-[credential]
-
-	helper = cache --timeout=864000
-
 [alias]
 
 	# View abbreviated SHA, description, and history graph of the latest 20 commits.

@@ -25,4 +25,6 @@ _darcs
 ^/LICENSE.*
 ^/COPYING
 
-**swap-pane
+
+/git/*
+^/swap-pane.*

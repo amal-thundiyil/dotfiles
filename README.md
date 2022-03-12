@@ -14,6 +14,10 @@ git clone https://github.com/amal-thundiyil/dotfiles.git ~/dotfiles
 Run `stow` to symlink everything or just select what you want
 
 ```bash
+stow . # obeys .stow-local-ignore
+```
+
+```bash
 stow */ # Everything (the '/' ignores the README)
 ```
 
