@@ -100,21 +100,40 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-# pyenv settings
-export PATH="/usr/local/opt/python/libexec/bin:$PATH"
-export PYENV_ROOT="$HOME/.pyenv"
-export PATH="$PYENV_ROOT/bin:$PATH"
-if command -v pyenv 1>/dev/null 2>&1; then
-  eval "$(pyenv init --path)"
-fi
+# Java paths
+JAVA_HOME="/usr/lib/jvm/java-8-openjdk-amd64"
+
+# Flutter settings
+export PATH="$PATH:$HOME/snap/flutter/common/flutter/bin"
+export CHROME_EXECUTABLE=/snap/bin/chromium
+export PATH=$PATH:$HOME"/Android/Sdk/platform-tools"
+
+# nvm paths
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+PATH="$HOME/.npm-global/bin:$PATH"
+export PATH=$PATH:$HOME/bin
 
 # alacritty settings
+. "$HOME/.cargo/env"
+source ~/.bash_completion.d/alacritty
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
+
+# Created by `pipx` on 2022-02-16 12:30:13
+export PATH="$PATH:/home/amal/.local/bin"
 
 # vim settings
 alias vimdiff='nvim -d'
 export EDITOR=nvim
 
+# terraform
+complete -C /usr/bin/terraform terraform
+
+# python settings
+alias python='/usr/bin/python3.7'
+alias python3='/usr/bin/python3.7'
+alias pip=pip3
 
 alias ll='ls -al'
