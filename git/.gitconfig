@@ -169,7 +169,7 @@
 
 [url "git@github.com:"]
 
-	insteadOf = "gh:"
+	insteadOf = git://github.com/
 	pushInsteadOf = "github:"
 	pushInsteadOf = "git://github.com/"
 
@@ -190,3 +190,8 @@
 [init]
 
 	defaultBranch = main
+
+[hub]
+	protocol = ssh
+[url "https://github.com/"]
+	insteadOf = git://github.com/
