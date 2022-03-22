@@ -1,4 +1,10 @@
+[include]
+
+    path = .git_credentials
+
 [alias]
+
+  cmp = "!f() { git add -A && git commit -m \"$@\" && git push; }; f"
 
 	# View abbreviated SHA, description, and history graph of the latest 20 commits.
 	l = log --pretty=oneline -n 20 --graph --abbrev-commit
@@ -187,11 +193,14 @@
 
 	insteadOf = "gist:"
 
+[url "https://github.com/"]
+
+	insteadOf = git://github.com/
+
 [init]
 
 	defaultBranch = main
 
 [hub]
+
 	protocol = ssh
-[url "https://github.com/"]
-	insteadOf = git://github.com/
