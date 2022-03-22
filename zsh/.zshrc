@@ -118,3 +118,5 @@ export EDITOR=nvim
 
 
 alias ll='ls -al'
+
+export GPG_TTY=$(tty)
