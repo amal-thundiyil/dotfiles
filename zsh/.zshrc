@@ -137,3 +137,10 @@ alias python3='/usr/bin/python3.7'
 alias pip=pip3
 
 alias ll='ls -al'
+
+# python paths
+export PYTHONPATH="${PYTHONPATH}:/home/amal/Documents/hydra/hydrus"
+export PYTHONPATH="${PYTHONPATH}:/home/amal/Documents/hydra/hydra-python-core"
+export PYTHONPATH="${PYTHONPATH}:/home/amal/Documents/hydra/hydra-open-api-parser"
+export PYTHONPATH="${PYTHONPATH}:/home/amal/Documents/hydra/hydra-python-agent"
+export PYTHONPATH="${PYTHONPATH}:/home/amal/Documents/hydra/hydra-python-agent-gui"
