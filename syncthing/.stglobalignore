@@ -1,0 +1,68 @@
+// .stglobalignore
+
+// Synology files
+@eaDir
+
+//---Mac-specific---//
+(?d).DS_Store
+.DocumentRevisions-V100
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.fseventsd
+(?d).localized
+.iCloud
+//Mac OS Metadata on Windows or Linux filesystems
+(?d)._*
+
+//---Windows-Specific---//
+(?d)desktop.ini
+(?d)Thumbs.db
+(?d)$RECYCLE.BIN
+
+//---Linux-specific---//
+.Trash-*
+
+//---QNAP-specific---//
+(?d).@__thumb
+(?d).AppleDB
+
+//---Synology-specific---//
+(?d)@eaDir
+
+//---Application-specific---//
+//-Syncthing
+(?d).stignore
+(?d).stfolder
+//-vi(m)
+(?d)*.*.swp
+//-Dropbox
+.dropbox
+.dropbox.attr
+//-Microsoft Office
+(?d)~*
+//-KDE
+.directory
+
+// Firefox downloads and other things
+*.part
+// Chrom(ium|e) downloads
+*.crdownload
+
+// BTSync files
+.sync
+*.bts
+*.!Sync
+.SyncID
+.SyncIgnore
+.SyncArchive
+*.SyncPart
+*.SyncTemp
+*.SyncOld
+
+//---OTHER---//
+(?d)*.pyc
+(?d)*.pyo
+(?d).git
+(?d)__pycache__
+

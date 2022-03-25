@@ -5,7 +5,7 @@
 [alias]
 
   cmp = "!f() { git add -A && git commit -m \"$@\" && git push; }; f"
-
+  sync = "!f() { git stash && git checkout -b $(git rev-parse --abbrev-ref HEAD)_sync && git stash apply && git add -A && git commit -m \"$@\" && git push -u origin HEAD && git checkout -; git stash pop; }; f"
 	# View abbreviated SHA, description, and history graph of the latest 20 commits.
 	l = log --pretty=oneline -n 20 --graph --abbrev-commit
 
