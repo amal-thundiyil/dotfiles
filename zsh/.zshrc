@@ -116,7 +116,12 @@ export LANG=en_US.UTF-8
 alias vimdiff='nvim -d'
 export EDITOR=nvim
 
-
-alias ll='ls -al'
+# brew python3.7 settings
+export PATH="/usr/local/opt/python@3.7/bin:$PATH"
+export LDFLAGS="-L/usr/local/opt/python@3.7/lib"
+export PKG_CONFIG_PATH="/usr/local/opt/python@3.7/lib/pkgconfig"
 
 export GPG_TTY=$(tty)
+
+alias ll='ls -al'
+alias home='cd /Volumes/Macintosh\ HD/Users/amal'
