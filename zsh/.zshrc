@@ -124,4 +124,21 @@ export PKG_CONFIG_PATH="/usr/local/opt/python@3.7/lib/pkgconfig"
 export GPG_TTY=$(tty)
 
 alias ll='ls -al'
-alias home='cd /Volumes/Macintosh\ HD/Users/amal'
+alias home='/Volumes/MacintoshHD/Users/amal'
+
+# sqlite extensions setting see https://www.cafe-encounter.net/p3244/installing-and-using-sqlite-extensions-on-macos-and-maybe-windows-linux-too
+export LD_PATH="$LD_PATH:/usr/local/lib"
+
+# Created by `pipx` on 2022-04-02 16:09:22
+export PATH="$PATH:/Users/amal/Library/Python/3.7/bin"
+
+# Created by `pipx` on 2022-04-02 16:09:32
+export PATH="$PATH:/Users/amal/.local/bin"
+
+# nvm settings
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+
+# go settings
+export PATH=$PATH:/usr/local/go/bin
