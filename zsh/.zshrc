@@ -132,8 +132,17 @@ export EDITOR=nvim
 complete -C /usr/bin/terraform terraform
 
 # python settings
-alias python='/usr/bin/python3.7'
-alias python3='/usr/bin/python3.7'
-alias pip=pip3
+# alias python='/usr/bin/python3.7'
+# alias python3='/usr/bin/python3.7'
+# alias pip=pip3
 
 alias ll='ls -al'
+alias python="python3"
+alias pip="pip3"
+alias tut="~/Documents/random/kart-tutorial"
+
+# error while on `make` kart : see https://stackoverflow.com/questions/58649177/python3-7-error-while-loading-shared-libraries-libpython3-7m-so-1-0
+export LD_LIBRARY_PATH=/lib:/usr/lib:/usr/local/lib
+
+# go settings
+export PATH=$PATH:/usr/local/go/bin
