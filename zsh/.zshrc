@@ -140,9 +140,21 @@ alias ll='ls -al'
 alias python="python3"
 alias pip="pip3"
 alias tut="~/Documents/random/kart-tutorial"
+alias github="~/Documents/gh"
+
+# python paths
+export PYTHONPATH="${PYTHONPATH}:${HOME}/Documents/gh/side_projects/moni-moni"
+export PYTHONPATH="${PYTHONPATH}:${HOME}/Documents/gh/kart"
 
 # error while on `make` kart : see https://stackoverflow.com/questions/58649177/python3-7-error-while-loading-shared-libraries-libpython3-7m-so-1-0
 export LD_LIBRARY_PATH=/lib:/usr/lib:/usr/local/lib
 
 # go settings
 export PATH=$PATH:/usr/local/go/bin
+
+# aws completer
+export PATH=/usr/local/bin/aws_completer:$PATH
+autoload bashcompinit && bashcompinit
+autoload -Uz compinit && compinit
+complete -C '/usr/local/bin/aws_completer' aws
+
