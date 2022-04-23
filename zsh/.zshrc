@@ -70,7 +70,7 @@ ZSH_THEME="agnoster"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(git zsh-autosuggestions zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -131,16 +131,14 @@ export EDITOR=nvim
 # terraform
 complete -C /usr/bin/terraform terraform
 
-# python settings
-# alias python='/usr/bin/python3.7'
-# alias python3='/usr/bin/python3.7'
-# alias pip=pip3
-
 alias ll='ls -al'
 alias python="python3"
 alias pip="pip3"
-alias tut="~/Documents/random/kart-tutorial"
 alias github="~/Documents/gh"
+alias rand="~/Documents/random"
+alias rankart="~/Documents/random/kart-tutorial"
+alias ranreva="~/Documents/random/reva-tutorial"
+alias revad="~/Downloads/revad_v2.2.0_linux_amd64"
 
 # python paths
 export PYTHONPATH="${PYTHONPATH}:${HOME}/Documents/gh/side_projects/moni-moni"
@@ -158,3 +156,13 @@ autoload bashcompinit && bashcompinit
 autoload -Uz compinit && compinit
 complete -C '/usr/local/bin/aws_completer' aws
 
+# for new line on ohmyzsh
+prompt_end() {
+  if [[ -n $CURRENT_BG ]]; then
+    echo -n " %{%k%F{$CURRENT_BG}%}$SEGMENT_SEPARATOR"
+  else
+    echo -n "%{%k%}"
+  fi
+  echo -n "\n 🙈 🙉 🙊 $ ~"
+  CURRENT_BG=''
+}

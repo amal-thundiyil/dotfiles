@@ -124,3 +124,5 @@ for file in ~/.{extra}; do
 	[ -r "$file" ] && [ -f "$file" ] && source "$file";
 done;
 unset file;
+
+[[ -s "/home/amal/.gvm/scripts/gvm" ]] && source "/home/amal/.gvm/scripts/gvm"
