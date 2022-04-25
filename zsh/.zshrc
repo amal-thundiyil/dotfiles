@@ -152,3 +152,15 @@ export PATH=$PATH:/usr/local/go/bin
 #
 # test -d "${GOPATH}" || mkdir "${GOPATH}"
 # test -d "${GOPATH}/src/github.com" || mkdir -p "${GOPATH}/src/github.com"
+
+
+# for new line on ohmyzsh
+prompt_end() {
+  if [[ -n $CURRENT_BG ]]; then
+    echo -n " %{%k%F{$CURRENT_BG}%}$SEGMENT_SEPARATOR"
+  else
+    echo -n "%{%k%}"
+  fi
+  echo -n "\n 🙈 🙉 🙊 $ ~"
+  CURRENT_BG=''
+}
