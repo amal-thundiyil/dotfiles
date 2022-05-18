@@ -131,14 +131,6 @@ export EDITOR=nvim
 # terraform
 complete -C /usr/bin/terraform terraform
 
-alias ll='ls -al'
-alias python="python3"
-alias pip="pip3"
-alias github="~/Documents/gh"
-alias rand="~/Documents/random"
-alias rankart="~/Documents/random/kart-tutorial"
-alias ranreva="~/Documents/random/reva-tutorial"
-alias revad="~/Downloads/revad_v2.2.0_linux_amd64"
 
 # python paths
 export PYTHONPATH="${PYTHONPATH}:${HOME}/Documents/gh/side_projects/moni-moni"
@@ -166,3 +158,19 @@ prompt_end() {
   echo -n "\n 🙈 🙉 🙊 $ ~"
   CURRENT_BG=''
 }
+
+# direnv settings
+eval "$(direnv hook zsh)"
+
+alias ll='ls -al'
+alias python="python3"
+alias pip="pip3"
+alias github="~/Documents/gh"
+alias rand="~/Documents/random"
+alias rankart="~/Documents/random/kart-tutorial"
+alias ranreva="~/Documents/random/reva-tutorial"
+alias revad="~/Downloads/revad_v2.2.0_linux_amd64"
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="$HOME/.sdkman"
+[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"

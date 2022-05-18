@@ -372,7 +372,10 @@ tmux_conf_update_plugins_on_reload=true
 #   - true (default)
 #   - false
 tmux_conf_uninstall_plugins_on_reload=true
+
 set -g @plugin 'tmux-plugins/tmux-resurrect'
+set -g @plugin 'tmux-plugins/tmux-continuum'
+
 # /!\ the tpm bindings differ slightly from upstream:
 #   - installing plugins: <prefix> + I
 #   - uninstalling plugins: <prefix> + Alt + u
