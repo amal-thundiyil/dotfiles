@@ -70,7 +70,7 @@ ZSH_THEME="agnoster"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(git zsh-autosuggestions zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -125,6 +125,7 @@ export GPG_TTY=$(tty)
 
 alias ll='ls -al'
 alias home='/Volumes/MacintoshHD/Users/amal'
+export home=/Volumes/MacintoshHD/Users/amal
 
 # sqlite extensions setting see https://www.cafe-encounter.net/p3244/installing-and-using-sqlite-extensions-on-macos-and-maybe-windows-linux-too
 export LD_PATH="$LD_PATH:/usr/local/lib"
@@ -164,3 +165,7 @@ prompt_end() {
   echo -n "\n 🙈 🙉 🙊 $ ~"
   CURRENT_BG=''
 }
+
+# kubernetes settings
+source <(kubectl completion zsh)
+alias k="kubectl"
