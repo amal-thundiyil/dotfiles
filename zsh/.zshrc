@@ -170,7 +170,10 @@ alias rand="~/Documents/random"
 alias rankart="~/Documents/random/kart-tutorial"
 alias ranreva="~/Documents/random/reva-tutorial"
 alias revad="~/Downloads/revad_v2.2.0_linux_amd64"
+alias g="git"
+alias k="kubectl"
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
+[[ /usr/local/bin/kubectl ]] && source <(kubectl completion zsh)
