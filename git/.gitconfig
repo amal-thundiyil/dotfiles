@@ -4,13 +4,16 @@
 
 [alias]
 
+  commit = "commit -s"
+
   rdir = !"git restore --source=HEAD --staged --worktree -- \"$1\""
 
-  squash = "!f() { git reset --soft HEAD~\"$1\" && git commit --edit -m\"$(git log --format=%B --reverse HEAD..HEAD@{1})\"; }; f"
+  squash = "!f() { git reset --soft HEAD~\"$1\" && git commit -s --edit -m\"$(git log --format=%B --reverse HEAD..HEAD@{1})\"; }; f"
 
-  cmp = "!f() { git add -A && git commit -m \"$@\" && git push; }; f"
+  cmp = "!f() { git add -A && git commit -s -m \"$@\" && git push; }; f"
 
-  sync = "!f() { git stash && git checkout -b $(git rev-parse --abbrev-ref HEAD)_sync && git stash apply && git add -A && git commit -m \"$@\" && git push -u origin HEAD && git checkout -; git stash pop; }; f"
+  sync = "!f() { git stash && git checkout -b $(git rev-parse --abbrev-ref HEAD)_sync && git stash apply && git add -A && git commit -s -m \"$@\" && git push -u origin HEAD && git checkout -; git stash pop; }; f"
+
 	# View abbreviated SHA, description, and history graph of the latest 20 commits.
 	l = log --pretty=oneline -n 20 --graph --abbrev-commit
 
@@ -30,7 +33,7 @@
 	c = clone --recursive
 
 	# Commit all changes.
-	ca = !git add -A && git commit -av
+	ca = !git add -A && git commit -s -av
 
 	# Switch to a branch, creating it if necessary.
 	go = "!f() { git checkout -b \"$1\" 2> /dev/null || git checkout \"$1\"; }; f"
@@ -140,7 +143,7 @@
 [commit]
 
 	# https://help.github.com/articles/signing-commits-using-gpg/
-	gpgsign = true
+	gpgSign = true
 
 [diff]
 
@@ -215,4 +218,8 @@
 [user]
 
 	name = Amal Thundiyil
-	email = amalthundiyil0@gmail.com
+	email = amal.s.thundiyil@gmail.com
+
+[pull]
+
+	rebase = true
