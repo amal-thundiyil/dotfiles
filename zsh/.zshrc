@@ -134,7 +134,7 @@ complete -C /usr/bin/terraform terraform
 
 # python paths
 export PYTHONPATH="${PYTHONPATH}:${HOME}/Documents/gh/side_projects/moni-moni"
-export PYTHONPATH="${PYTHONPATH}:${HOME}/Documents/gh/kart"
+# export PYTHONPATH="${PYTHONPATH}:${HOME}/Documents/gh/kart"
 
 # error while on `make` kart : see https://stackoverflow.com/questions/58649177/python3-7-error-while-loading-shared-libraries-libpython3-7m-so-1-0
 export LD_LIBRARY_PATH=/lib:/usr/lib:/usr/local/lib
@@ -177,3 +177,7 @@ alias k="kubectl"
 export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
 [[ /usr/local/bin/kubectl ]] && source <(kubectl completion zsh)
+
+export HISTTIMEFORMAT="%d/%m/%y %T "
+
+export COMPOSE_DOCKER_CLI_BUILD=0
